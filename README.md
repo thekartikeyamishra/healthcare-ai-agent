@@ -63,11 +63,6 @@ The app will be available at `http://localhost:3000`.
 
 ---
 
-## **Demo**
-
-You can find a live demo of the application [here](#) (update with your live deployment link).
-
----
 
 ## **Project Structure**
 
@@ -182,12 +177,6 @@ Contributions are welcome! If you would like to contribute:
    git push origin feature-name
    ```
 5. Create a pull request.
-
----
-
-## **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
