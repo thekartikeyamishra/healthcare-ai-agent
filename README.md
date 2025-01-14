@@ -1,70 +1,201 @@
-# Getting Started with Create React App
+# **Healthcare AI Agent**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that provides healthcare-related assistance powered by the OpenAI ChatGPT API. Users can ask health-related questions, and the app responds with helpful and formatted advice in a tabular format.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
 
-### `npm start`
+- **AI-Powered Assistance**: Uses OpenAI's GPT-3.5/4 to provide accurate healthcare advice.
+- **User-Friendly Interface**: Simple and intuitive text input and response display.
+- **Formatted Responses**: Presents AI-generated advice in a tabular format for better readability.
+- **Secure Configuration**: API key management using environment variables.
+- **Error Handling**: Displays clear messages for invalid inputs or API errors.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Technologies Used**
 
-### `npm test`
+- **Frontend**: React.js
+- **Backend API**: OpenAI ChatGPT API
+- **Styling**: CSS
+- **Environment Management**: `.env` for sensitive data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Installation and Setup**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/thekartikeyamishra/healthcare-ai-agent.git
+cd healthcare-ai-agent
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **2. Install Dependencies**
+Ensure you have [Node.js](https://nodejs.org/) installed. Then, run:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **3. Set Up API Key**
+1. Create a `.env` file in the project root:
+   ```bash
+   touch .env
+   ```
+2. Add your OpenAI API key to the `.env` file:
+   ```plaintext
+   REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
+   ```
 
-### `npm run eject`
+### **4. Start the Development Server**
+```bash
+npm start
+```
+The app will be available at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **How to Use**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Enter a Query**: Type a healthcare-related question in the input box (e.g., "What are the symptoms of a cold?").
+2. **Get Response**: Click on the "Get Response" button.
+3. **View Results**: The AI-generated response will be displayed in a formatted table below the input box.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **Demo**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can find a live demo of the application [here](#) (update with your live deployment link).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## **Project Structure**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+healthcare-ai-agent/
+│
+├── public/
+│   ├── index.html          # Main HTML file
+│   ├── favicon.ico         # Favicon
+│
+├── src/
+│   ├── components/
+│   │   └── HealthcareAgent.js   # Main AI Agent Component
+│   │
+│   ├── App.js                   # Main App Component
+│   ├── index.js                 # Entry Point for React App
+│   └── styles.css               # Custom Styles
+│
+├── .env                         # Environment Variables (Not committed to Git)
+├── .gitignore                   # Git Ignore File
+├── package.json                 # Project Dependencies
+└── README.md                    # Project Documentation
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## **Environment Variables**
 
-### Making a Progressive Web App
+| Key                     | Description                          |
+|-------------------------|--------------------------------------|
+| `REACT_APP_OPENAI_API_KEY` | Your OpenAI API key for the ChatGPT API |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## **Deployment**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **Deploy to Netlify**
+1. Install Netlify CLI:
+   ```bash
+   npm install -g netlify-cli
+   ```
+2. Build the project:
+   ```bash
+   npm run build
+   ```
+3. Deploy the build folder:
+   ```bash
+   netlify deploy
+   ```
+4. Add `REACT_APP_OPENAI_API_KEY` in the environment variable settings on Netlify.
 
-### Deployment
+### **Deploy to Vercel**
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+2. Deploy the project:
+   ```bash
+   vercel
+   ```
+3. Add `REACT_APP_OPENAI_API_KEY` in the environment variable settings on Vercel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## **Examples**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Input**
+> What are the symptoms of a cold?
+
+### **Output**
+| **Field**                          | **Details**                                                        |
+|------------------------------------|--------------------------------------------------------------------|
+| Symptom 1                          | Sneezing                                                           |
+| Symptom 2                          | Runny nose                                                         |
+| Symptom 3                          | Sore throat                                                        |
+| Symptom 4                          | Mild headache                                                      |
+| Advice                             | Rest, stay hydrated, and take over-the-counter medication if needed.|
+
+---
+
+## **Troubleshooting**
+
+### **Common Issues**
+1. **Error: "API key is missing. Check your .env file."**
+   - Ensure the `.env` file is created and contains the correct API key.
+   - Restart the development server after adding the `.env` file.
+
+2. **Error: "Failed to fetch AI response."**
+   - Verify your OpenAI API key is valid and has sufficient credits.
+   - Check your network connection.
+
+3. **Blank or Unexpected Responses**
+   - Ensure the question is clear and concise.
+   - Try rephrasing the query for better results.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! If you would like to contribute:
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## **Acknowledgments**
+
+- [OpenAI](https://openai.com/) for the ChatGPT API.
+- React.js community for providing excellent documentation and tools.
+
+---
+
+Let me know if you need further assistance!
